@@ -1,0 +1,22 @@
+@use 'partials/variables' as *;
+@use 'partials/typography' as *;
+
+
+body {
+  font-family: 'Avenir Next Regular', sans-serif; // Default font
+}
+
+h1 {
+  font-family: 'Avenir Next Bold', sans-serif; // Font for headings
+  font-weight: 700; // Ensure bold weight is applied
+}
+
+.regular-text {
+  font-family: 'Avenir Next Regular', sans-serif; // Font for regular text
+  font-weight: 400; // Ensure regular weight is applied
+}
+
+.demi-text {
+  font-family: 'Avenir Next Demi', sans-serif; // Font for demi text
+  font-weight: 600; // Ensure demi weight is applied
+}

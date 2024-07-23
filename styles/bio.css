@@ -1,1 +1,38 @@
-/*# sourceMappingURL=bio.css.map */
+/*primary colors*/
+/*secondary colors*/
+@font-face {
+  font-family: "Avenir Next Regular";
+  src: url("../assets/fonts/avenir-next-regular.woff2") format("woff2"), url("../assets/fonts/avenir-next-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next Demi";
+  src: url("../assets/fonts/avenir-next-demi.woff2") format("woff2"), url("../assets/fonts/avenir-next-demi.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next Bold";
+  src: url("../assets/fonts/avenir-next-bold.woff2") format("woff2"), url("../assets/fonts/avenir-next-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+body {
+  font-family: "Avenir Next Regular", sans-serif;
+}
+
+h1 {
+  font-family: "Avenir Next Bold", sans-serif;
+  font-weight: 700;
+}
+
+.regular-text {
+  font-family: "Avenir Next Regular", sans-serif;
+  font-weight: 400;
+}
+
+.demi-text {
+  font-family: "Avenir Next Demi", sans-serif;
+  font-weight: 600;
+}/*# sourceMappingURL=bio.css.map */
