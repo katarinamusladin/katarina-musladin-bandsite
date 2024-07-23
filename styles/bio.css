@@ -18,21 +18,51 @@
   font-weight: 700;
   font-style: normal;
 }
-body {
-  font-family: "Avenir Next Regular", sans-serif;
-}
-
-h1 {
-  font-family: "Avenir Next Bold", sans-serif;
+.page-header {
+  font-family: "Avenir Next Bold";
+  font-size: 24px;
+  line-height: 32px;
   font-weight: 700;
 }
 
-.regular-text {
-  font-family: "Avenir Next Regular", sans-serif;
+.section-header {
+  font-family: "Avenir Next Bold";
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.subheader {
+  font-family: "Avenir Next Demi";
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+.body-copy {
+  font-family: "Avenir Next Regular";
+  font-size: 13px;
+  line-height: 18px;
   font-weight: 400;
 }
 
-.demi-text {
-  font-family: "Avenir Next Demi", sans-serif;
-  font-weight: 600;
+.footer-copy {
+  font-family: "Avenir Next Regular";
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.label-text {
+  font-family: "Avenir Next Bold";
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.button-text {
+  font-family: "Avenir Next Bold";
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: 700;
 }/*# sourceMappingURL=bio.css.map */

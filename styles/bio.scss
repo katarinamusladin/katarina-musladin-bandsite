@@ -2,21 +2,51 @@
 @use 'partials/typography' as *;
 
 
-body {
-  font-family: 'Avenir Next Regular', sans-serif; // Default font
+.page-header {
+  font-family: 'Avenir Next Bold';
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
 }
 
-h1 {
-  font-family: 'Avenir Next Bold', sans-serif; // Font for headings
-  font-weight: 700; // Ensure bold weight is applied
+.section-header {
+  font-family: 'Avenir Next Bold';
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
 }
 
-.regular-text {
-  font-family: 'Avenir Next Regular', sans-serif; // Font for regular text
-  font-weight: 400; // Ensure regular weight is applied
+.subheader {
+  font-family: 'Avenir Next Demi';
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
 }
 
-.demi-text {
-  font-family: 'Avenir Next Demi', sans-serif; // Font for demi text
-  font-weight: 600; // Ensure demi weight is applied
+.body-copy {
+  font-family: 'Avenir Next Regular';
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+
+.footer-copy {
+  font-family: 'Avenir Next Regular';
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.label-text {
+  font-family: 'Avenir Next Bold';
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: 700;
+}
+.button-text {
+  font-family: 'Avenir Next Bold';
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: 700;
 }
