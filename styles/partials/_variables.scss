@@ -1,13 +1,28 @@
 /*primary colors*/
-$band-site-black: #323232;
-$silver: #afafaf;
-$white: #ffffff;
+$primary-band-site-black: #323232;
+$primary-silver: #afafaf;
+$primary-white: #ffffff;
 $light-grey: #f7f7f7;
 /*secondary colors*/
-$band-site-dark-black: #000000;
-$mercury: #e1e1e1;
-$alabaster: #fafafa;
+$secondary-band-site-dark-black: #000000;
+$secondary-mercury: #e1e1e1;
+$secondary-alabaster: #fafafa;
 
+$fs-h1: 24px; //font-size
+$lh-h1: 32px; //line-height
 
+$fs-h3: 14px;
+$lh-h3: 22px;
+
+$fs-p: 13px;
+$lh-p: 18px;
+
+$font-bold: 'Avenir Next Bold';
+$font-reg: 'Avenir Next Regular';
+$font-demi: 'Avenir Next Demi';
+
+$padding-before-headline: 24px;
+$padding-after-headline: 16px;
+$padding-between-component: 16px;
 
 

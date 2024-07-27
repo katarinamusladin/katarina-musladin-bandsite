@@ -1,0 +1,125 @@
+.footer {
+  background-color: $primary-band-site-black;
+  color: $secondary-alabaster;
+  padding: 1.5rem 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    position: relative;
+    padding: 0 1rem;
+  }
+
+  &__logo {
+    margin-top: 2.125rem;
+    display: block;
+    position: static;
+
+    &-link img {
+      max-width: 7.5rem;
+      max-height: 1.25rem;
+    }
+  }
+
+  &__title {
+    padding-bottom: $padding-after-headline;
+    color: $secondary-alabaster;
+    font-weight: $font-demi;
+  }
+
+  &__social-media {
+    display: flex;
+    justify-content: left;
+    gap: 1.875rem;
+    padding-bottom: $padding-between-component;
+
+    &-icon img {
+      width: auto;
+      height: 1.4375rem;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: $padding-between-component;
+
+    &-title {
+      font-family: $font-demi;
+      font-size: $fs-h3;
+      line-height: $lh-h3;
+      padding-bottom: $padding-between-component;
+    }
+
+    &-info {
+      text-align: left;
+      color: $secondary-alabaster;
+
+      .email {
+        display: block;
+        padding-top: .625rem;
+
+        a {
+          color: $secondary-alabaster;
+          text-decoration: none;
+          padding-top: 1rem;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    color: $secondary-alabaster;
+    padding-top: $padding-between-component;
+    text-align: left;
+  }
+
+  @include tablet {
+    &__container {
+      padding: 0 1rem;
+    }
+
+    &__contact {
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    &__content {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    &__social-media {
+      margin-left: 1.25rem;
+      margin-top: 0.8rem;
+    }
+    &__logo {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      margin-top: -0.625rem;
+    }
+  }
+
+  @include desktop {
+    &__container {
+      padding: 0 8.5rem;
+    }
+    &__logo {
+      padding-right: 3rem;
+    }
+  }
+}
