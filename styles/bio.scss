@@ -194,8 +194,9 @@ body {
   }
 
   &__grid {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 1rem;
   }
 
@@ -214,8 +215,8 @@ body {
   @include tablet {
     padding: 0 2rem;
 
-    &__grid {
-      grid-template-columns: repeat(3, 1fr);
+    &__image {
+      width: calc(33.33% - 0.67rem); 
     }
   }
 

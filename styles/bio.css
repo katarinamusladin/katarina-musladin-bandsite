@@ -404,8 +404,9 @@ body a {
   padding-bottom: 16px;
 }
 .gallery__grid {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 1rem;
 }
 .gallery__image {
@@ -423,8 +424,8 @@ body a {
   .gallery {
     padding: 0 2rem;
   }
-  .gallery__grid {
-    grid-template-columns: repeat(3, 1fr);
+  .gallery__image {
+    width: calc(33.33% - 0.67rem);
   }
 }
 @media (min-width: 1200px) {
