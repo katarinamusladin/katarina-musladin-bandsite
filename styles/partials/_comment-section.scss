@@ -1,12 +1,8 @@
 .comment-section {
  &__title{
-  font-size: 1.5rem;
-  line-height: 1rem;
-  text-align: left;
-  font-family: $font-bold;
-  padding-top: 1.5rem;
   padding-left: 1rem;
  }
+
  &__photo{
   border-radius: 100%;
   max-width: 3rem;
@@ -20,8 +16,29 @@
   margin-left: 3rem;
   margin-top: -5rem;
  }
-}
+ @include tablet{
+  padding: 0 1rem;
+  &__title{
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: $font-bold;
+  }
+  
+ }
 
+ @include desktop {
+  padding: 0 5rem;
+  &__title {
+    padding-left: 4.5rem;
+  }
+  &__input {
+    padding-left: 3rem;
+  }
+ 
+  
+ }
+
+}
 .comment-form {
   display: flex;
   flex-direction: column;
