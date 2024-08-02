@@ -1,0 +1,158 @@
+.shows {
+  background-color: $primary-white;
+  color: $primary-band-site-black;
+
+  &-wrapper {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+    padding: 1rem 0;
+
+    @include tablet {
+      padding: 0.5rem 1.125rem 2.25rem;
+    }
+
+    @include desktop {
+      margin: 0 auto;
+      padding: 0 8rem;
+      max-width: 1280px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    padding: 1rem;
+    font-weight: $font-demi;
+    color: $primary-band-site-black;
+
+    @include tablet {
+      padding: 3rem 1.125rem 1.5rem;
+      font-size: 2.25rem;
+    }
+  }
+
+  &__list-wrapper {
+    @include desktop {
+      padding: 3rem 0;
+      width: 80%;
+    }
+  }
+
+  &__subtitle-wrapper {
+    display: none;
+    font-weight: $font-demi;
+
+    @include tablet {
+      padding: 1.5rem 1rem 0.5rem;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__subtitle {
+    text-align: left;
+    color: $primary-silver;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: $font-demi;
+    flex: 1;
+  }
+
+  &__btn {
+    height: 2.5rem;
+    border-radius: 0.25rem;
+    width: 100%;
+    border: none;
+    text-transform: uppercase;
+    background-color: $primary-band-site-black;
+    color: $primary-white;
+    font-weight: $font-demi;
+    font-size: 1rem;
+    padding: 0 2rem;
+
+    @include tablet {
+      min-width: auto;
+    }
+
+    @include desktop {
+      width: auto;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+    padding: 1rem;
+    border-bottom: solid .0625rem $secondary-mercury;
+
+    &:hover {
+      background-color: $secondary-alabaster;
+    }
+
+    &--selected {
+      background-color: $secondary-mercury;
+    }
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+  }
+
+  &__item-detail {
+    padding-bottom: 0.5rem;
+
+    @include tablet {
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  &__label--mobile {
+    display: contents;
+    color: $primary-silver;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.625rem;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__item-text {
+    font-size: 0.8125rem;
+    padding: 0.25rem 0;
+
+    @include tablet {
+      font-size: 0.875rem;
+    }
+
+    &--date {
+      font-weight: 600;
+    }
+
+    @include desktop {
+      font-size: 1rem;
+    }
+  }
+
+  &__btn-wrapper {
+    padding-top: 0.5rem;
+
+    @include tablet {
+      padding: 0;
+      min-width: 25%;
+    }
+
+    @include desktop {
+      width: 9.375rem;
+      text-align: right;
+    }
+  }
+}

@@ -14,3 +14,11 @@ $breakpoints: (
     @content;
   }
 }
+
+
+@mixin avatar-image {
+  border-radius: 100%;
+    max-width: 3rem;
+    max-height: 3rem;
+    min-height: 3rem;
+}

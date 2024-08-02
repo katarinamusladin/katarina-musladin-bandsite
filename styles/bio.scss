@@ -130,9 +130,17 @@ body {
   &__quote {
     margin: 1rem 0;
     font-family: $font-demi;
-    font-size: $fs-h3;
+    font-size: 1rem;
     line-height: $lh-h3;
   }
+
+  &__quote-name{
+    margin: 1rem 0;
+    font-family: $font-demi;
+    font-size: 1rem;
+    line-height: $lh-h3;
+  }
+
 
   &__info {
     display: flex;
@@ -164,6 +172,10 @@ body {
 
     &__image {
       height: 18rem;
+    }
+
+    &__quote {
+      font-size: 1.4rem;
     }
 
     &__description {
