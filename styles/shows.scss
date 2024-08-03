@@ -1,10 +1,9 @@
 @import "partials/variables";
 @import "partials/typography";
 @import "partials/mixins";
-@import "partials/shows";
 @import "partials/navigation";
 @import "partials/footer";
-
+@import "partials/events";
 
 * {
   margin: 0;
@@ -234,3 +233,37 @@ body {
     }
   }
 }
+
+
+ .soundcloud-embed {
+    font-size: 10px;
+    color: #cccccc;
+    line-break: anywhere;
+    word-break: normal;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+    font-weight: 100;
+}
+
+.soundcloud-iframe {
+
+    width: 100%;
+
+@include tablet {
+width: 60%;
+padding-left: 32px;
+}
+
+@include desktop {
+    width: 50%;
+    margin-top: 2rem;
+}
+}
+
+.soundcloud-embed a {
+    color: #cccccc;
+    text-decoration: none;
+}
+

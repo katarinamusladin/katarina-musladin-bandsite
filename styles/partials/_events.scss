@@ -1,0 +1,124 @@
+.shows-section {
+  padding: 1rem;
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+
+  &__label {
+    color: $primary-silver;
+    font-weight: $font-demi;
+    font-family: $font-demi;
+  }
+
+  &__header {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__button {
+    align-self: flex-start;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: $primary-band-site-black;
+      color: white;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+
+    &:hover {
+      color: $primary-white;
+      background: $secondary-band-site-dark-black;
+      cursor: pointer;
+    }
+    @media (min-width: 768px) {
+      width: auto; 
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0;
+    border-bottom: 1px solid $secondary-mercury;
+
+    &-detail {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      margin-bottom: 0.5rem;
+
+      & > .shows-section__label {
+        font-weight: bold;
+        margin-bottom: 0.25rem;
+      }
+
+      & > span {
+        text-align: left;
+        margin-bottom: 0;
+        margin-right: 4rem;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__header {
+      display: flex;  
+      justify-content: space-around;
+      padding: 1rem 0;
+      font-weight: bold;
+      color: $primary-silver;
+
+      &-item {
+        padding: 1rem 0;
+        text-align: left;
+      
+        
+      }
+    }
+    &__label {
+      display:none;
+    }
+
+    &__list {
+      flex-direction: column;
+    }
+
+    &__item {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+
+      &-detail {
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        margin-bottom: 0;
+        text-align: left;
+
+        & > span {
+          text-align: center;
+        }
+      }
+
+     
+
+      &__button {
+        align-self: flex-end;
+        width: auto;
+        padding: 0.5rem 1rem;
+        font-size: 16px;
+        
+      }
+    }
+  }
+}
