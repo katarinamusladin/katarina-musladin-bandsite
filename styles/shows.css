@@ -300,13 +300,8 @@
   .shows-section__header {
     display: flex;
     justify-content: space-around;
-    padding: 1rem 0;
     font-weight: bold;
     color: #afafaf;
-  }
-  .shows-section__header-item {
-    padding: 1rem 0;
-    text-align: left;
   }
   .shows-section__label {
     display: none;
@@ -316,16 +311,14 @@
   }
   .shows-section__item {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     padding: 1rem 0;
   }
   .shows-section__item-detail {
     flex-direction: column;
-    align-items: center;
     flex: 1;
     margin-bottom: 0;
-    text-align: left;
   }
   .shows-section__item-detail > span {
     text-align: center;
@@ -389,6 +382,17 @@ body a {
   }
 }
 
+@media (min-width: 768px) {
+  .navigation__logo-image {
+    margin-left: 4.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .navigation__logo-image {
+    margin-left: 9rem;
+  }
+}
+
 /* Hero section styles */
 .hero {
   position: relative;
@@ -402,6 +406,16 @@ body a {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.hero__big-title {
+  padding-bottom: 1rem;
+}
+.hero__album-title {
+  font-family: "Avenir Next Demi";
+  padding: 1rem 0;
+  line-height: 24px;
+  margin-top: 2rem;
+  font-size: 0.875rem;
 }
 .hero__overlay {
   position: absolute;
@@ -421,128 +435,26 @@ body a {
   text-align: left;
   z-index: 2;
 }
+@media (min-width: 768px) {
+  .hero .hero__album-title {
+    font-size: 24px;
+    padding-left: 2rem;
+  }
+  .hero .hero__big-title {
+    padding-left: 2rem;
+    width: 65%;
+    padding-bottom: 2rem;
+  }
+}
 @media (min-width: 1200px) {
+  .hero .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .hero .hero__title {
-    padding-left: 8.5rem;
-  }
-}
-
-/* About Section */
-.about {
-  background-color: #ffffff;
-  padding: 0 1rem;
-  box-sizing: border-box;
-}
-.about__title {
-  text-align: left;
-  padding-top: 24px;
-  padding-bottom: 16px;
-  padding-left: 1rem;
-}
-.about__content-wrapper {
-  padding: 0;
-}
-.about__image {
-  width: 100%;
-  height: 10rem;
-  margin: 1rem auto;
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.about__quote {
-  margin: 1rem 0;
-  font-family: "Avenir Next Demi";
-  font-size: 14px;
-  line-height: 22px;
-}
-.about__info {
-  display: flex;
-  flex-wrap: wrap;
-}
-.about__subtitle {
-  margin-bottom: 1rem;
-  text-align: left;
-  font-family: "Avenir Next Demi";
-  font-size: 14px;
-  line-height: 22px;
-  padding-top: 1rem;
-}
-.about__description {
-  text-align: left;
-  margin-bottom: 1rem;
-}
-@media (min-width: 768px) {
-  .about__content-wrapper {
-    padding: 0 3rem;
-  }
-  .about__info {
-    flex-direction: row;
-  }
-  .about__image {
-    height: 18rem;
-  }
-  .about__description {
-    flex: 1;
-    margin-right: 1.5rem;
-  }
-}
-@media (min-width: 1200px) {
-  .about__title {
-    padding-left: 8.5rem;
-  }
-  .about__content-wrapper {
-    padding: 0 13rem;
-  }
-}
-
-/* Gallery Section */
-.gallery {
-  background-color: #fafafa;
-  box-sizing: border-box;
-  padding: 0 1rem;
-  margin-bottom: 2rem;
-}
-.gallery__title {
-  margin-bottom: 1rem;
-  text-align: left;
-  padding-top: 24px;
-  padding-bottom: 16px;
-}
-.gallery__grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
-}
-.gallery__image {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease;
-}
-.gallery__image:hover {
-  filter: grayscale(0%);
-}
-@media (min-width: 768px) {
-  .gallery {
-    padding: 0 2rem;
-  }
-  .gallery__image {
-    width: calc(33.33% - 0.67rem);
-  }
-}
-@media (min-width: 1200px) {
-  .gallery {
-    padding: 0 5rem;
-  }
-  .gallery__title {
-    padding-left: 4.5rem;
-  }
-  .gallery__grid {
-    padding-left: 4.5rem;
+    width: 75%;
+    margin-left: 5rem;
   }
 }
 
@@ -554,22 +466,25 @@ body a {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
-  font-weight: 100;
+  font-family: "Avenir Next Regular";
 }
 
 .soundcloud-iframe {
   width: 100%;
+  height: 120px;
+  margin-bottom: 2rem;
+  border: none;
 }
 @media (min-width: 768px) {
   .soundcloud-iframe {
-    width: 60%;
+    width: 50%;
+    height: 150px;
     padding-left: 32px;
   }
 }
 @media (min-width: 1200px) {
   .soundcloud-iframe {
-    width: 50%;
+    width: 80%;
     margin-top: 2rem;
   }
 }

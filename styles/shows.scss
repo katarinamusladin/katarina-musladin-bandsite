@@ -60,6 +60,20 @@ body {
   }
 }
 
+.navigation{
+  @include tablet {
+    &__logo-image {
+    margin-left: 4.5rem;
+    }
+  }
+
+  @include desktop {
+    &__logo-image {
+      margin-left: 9rem;
+      }
+  }
+}
+
 /* Hero section styles */
 .hero {
   position: relative;
@@ -72,6 +86,20 @@ body {
     width: 100%;
     height: auto;
     object-fit: cover;
+  }
+
+  &__big-title{
+    padding-bottom: 1rem;
+    
+  }
+
+  &__album-title{
+    font-family: $font-demi;
+    padding: 1rem 0;
+    line-height: 24px;
+    margin-top: 2rem;
+    font-size: 0.875rem;
+
   }
 
   &__overlay {
@@ -92,147 +120,46 @@ body {
     font-size: 2rem;
     text-align: left;
     z-index: 2;
-    // padding-left: 136px;
+    
   }
+  @include tablet{
+    .hero__album-title{
+      font-size: 24px;
+      padding-left: 2rem;
+      
+    }
+    .hero__big-title {
+      padding-left: 2rem;
+      width: 65%;
+      padding-bottom: 2rem;
+      
+      
+      
+    }
+  }
+ 
 
   @include desktop {
+    .title {
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     .hero__title {
-      padding-left: 8.5rem;
+      width: 75%;
+      margin-left: 5rem;
+    
     }
+
+    
+
+    
+
+    
   }
 }
 
-/* About Section */
-.about {
-  background-color: $primary-white;
-  padding: 0 1rem;
-  box-sizing: border-box;
-
-  &__title {
-    text-align: left;
-    padding-top: $padding-before-headline;
-    padding-bottom: $padding-after-headline;
-    padding-left: 1rem;
-  }
-
-  &__content-wrapper {
-    padding: 0;
-  }
-
-  &__image {
-    width: 100%;
-    height: 10rem;
-    margin: 1rem auto;
-    display: block;
-    object-fit: cover;
-  }
-
-  &__quote {
-    margin: 1rem 0;
-    font-family: $font-demi;
-    font-size: $fs-h3;
-    line-height: $lh-h3;
-  }
-
-  &__info {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  &__subtitle {
-    margin-bottom: 1rem;
-    text-align: left;
-    font-family: $font-demi;
-    font-size: $fs-h3;
-    line-height: $lh-h3;
-    padding-top: 1rem;
-  }
-
-  &__description {
-    text-align: left;
-    margin-bottom: 1rem;
-  }
-
-  @include tablet {
-    &__content-wrapper {
-      padding: 0 3rem;
-    }
-
-    &__info {
-      flex-direction: row;
-    }
-
-    &__image {
-      height: 18rem;
-    }
-
-    &__description {
-      flex: 1;
-      margin-right: 1.5rem;
-    }
-  }
-  @include desktop {
-    &__title {
-      padding-left: 8.5rem;
-    }
-    &__content-wrapper {
-      padding: 0 13rem;
-    }
-  }
-}
-/* Gallery Section */
-.gallery {
-  background-color: $secondary-alabaster;
-  box-sizing: border-box;
-  padding: 0 1rem;
-  margin-bottom: 2rem;
-
-  &__title {
-    margin-bottom: 1rem;
-    text-align: left;
-    padding-top: $padding-before-headline;
-    padding-bottom: $padding-after-headline;
-  }
-
-  &__grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1rem;
-  }
-
-  &__image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
-
-    &:hover {
-      filter: grayscale(0%);
-    }
-  }
-
-  @include tablet {
-    padding: 0 2rem;
-
-    &__image {
-      width: calc(33.33% - 0.67rem);
-    }
-  }
-
-  @include desktop {
-    padding: 0 5rem;
-
-    &__title {
-      padding-left: 4.5rem;
-    }
-
-    &__grid {
-      padding-left: 4.5rem;
-    }
-  }
-}
 
 
  .soundcloud-embed {
@@ -243,21 +170,25 @@ body {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
-    font-weight: 100;
+    font-family: $font-reg;
+    
 }
 
 .soundcloud-iframe {
-
     width: 100%;
+   height: 120px;
+   margin-bottom: 2rem;
+   border: none;
+   
 
 @include tablet {
-width: 60%;
+width: 50%;
+height: 150px;
 padding-left: 32px;
 }
 
 @include desktop {
-    width: 50%;
+    width: 80%;
     margin-top: 2rem;
 }
 }
@@ -266,4 +197,5 @@ padding-left: 32px;
     color: #cccccc;
     text-decoration: none;
 }
+
 

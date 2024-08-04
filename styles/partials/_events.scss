@@ -73,16 +73,11 @@
     &__header {
       display: flex;  
       justify-content: space-around;
-      padding: 1rem 0;
+      // padding: 1rem 0;
       font-weight: bold;
       color: $primary-silver;
 
-      &-item {
-        padding: 1rem 0;
-        text-align: left;
       
-        
-      }
     }
     &__label {
       display:none;
@@ -94,16 +89,16 @@
 
     &__item {
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-evenly;
       align-items: center;
       padding: 1rem 0;
 
       &-detail {
         flex-direction: column;
-        align-items: center;
         flex: 1;
         margin-bottom: 0;
-        text-align: left;
+       
+       
 
         & > span {
           text-align: center;
