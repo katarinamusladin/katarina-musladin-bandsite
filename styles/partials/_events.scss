@@ -1,3 +1,17 @@
+
+body{
+  span{
+    line-height: 1.5rem;
+    font-weight: $font-reg;
+    font-size: 18px;
+    font-family: $font-reg;
+    font-size: $fs-p;
+    line-height: $lh-p;
+  }
+  
+}
+
+
 .shows-section {
   padding: 1rem;
 
@@ -7,14 +21,37 @@
     text-align: left;
   }
 
+  &__date{
+    font-weight: bold;
+    font-weight: $font-reg;
+  }
+
+  &__venue,
+  &__location,
+  &__date {
+    font-weight: $font-reg;
+    font-size: 18px;
+    line-height: 1.5rem;
+    padding-bottom: 0.5rem;
+    
+  }
+
   &__label {
     color: $primary-silver;
     font-weight: $font-demi;
-    font-family: $font-demi;
+    display: flex;
+    flex-direction: column;
+    line-height: 24px;
+    
+    
+    
   }
 
   &__header {
     display: none;
+    font-size:14px;
+    padding-bottom: 1rem;
+    
   }
 
   &__list {
@@ -24,72 +61,71 @@
 
   &__button {
     align-self: flex-start;
-      margin-top: 0.5rem;
-      padding: 0.5rem 1rem;
-      background-color: $primary-band-site-black;
-      color: white;
-      border: none;
-      cursor: pointer;
-      width: 100%;
+    margin-top: 0.25rem;
+    padding: 0.5rem 1rem;
+    background-color: $primary-band-site-black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 5px;
+    
 
     &:hover {
       color: $primary-white;
       background: $secondary-band-site-dark-black;
       cursor: pointer;
     }
-    @media (min-width: 768px) {
-      width: auto; 
+
+   @include tablet {
+      width: auto;
+      
     }
   }
 
   &__item {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     border-bottom: 1px solid $secondary-mercury;
 
-    &-detail {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      width: 100%;
-      margin-bottom: 0.5rem;
-
-      & > .shows-section__label {
-        font-weight: bold;
-        margin-bottom: 0.25rem;
-      }
-
-      & > span {
-        text-align: left;
-        margin-bottom: 0;
-        margin-right: 4rem;
-      }
-    }
+    
+   
   }
 
-  @media (min-width: 768px) {
+  @include tablet {
     &__header {
       display: flex;  
-      justify-content: space-around;
-      // padding: 1rem 0;
+      justify-content: space-between;
       font-weight: bold;
       color: $primary-silver;
+      padding-left: 1rem;
 
-      
+      &-item {
+        &:last-child {
+          visibility: hidden;
+        }
+      }
     }
+
+    &__title {
+      padding-left: 1rem;
+    }
+
     &__label {
-      display:none;
+      display: none;
     }
 
     &__list {
       flex-direction: column;
     }
 
+   
+
     &__item {
       flex-direction: row;
-      justify-content: space-evenly;
+      justify-content: space-between;
       align-items: center;
       padding: 1rem 0;
 
@@ -97,15 +133,18 @@
         flex-direction: column;
         flex: 1;
         margin-bottom: 0;
-       
-       
+        padding-left: 1rem;
 
-        & > span {
-          text-align: center;
-        }
+        &__venue,
+      &__location,
+      &__date {
+        width: 50%;
+        align-items: left;
+        
       }
 
-     
+       
+      }
 
       &__button {
         align-self: flex-end;
