@@ -2,9 +2,8 @@
 body{
   span{
     line-height: 1.5rem;
-    font-weight: $font-reg;
-    font-size: 18px;
     font-family: $font-reg;
+    font-size: 18px;
     font-size: $fs-p;
     line-height: $lh-p;
   }
@@ -24,7 +23,7 @@ body{
   &__content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align content to the start by default */
+    align-items: flex-start; 
   }
 
   &__date{
@@ -35,7 +34,7 @@ body{
   &__venue,
   &__location,
   &__date {
-    font-weight: $font-reg;
+    font-weight: $font-bold;
     font-size: 18px;
     line-height: 1.5rem;
     padding-bottom: 0.5rem;

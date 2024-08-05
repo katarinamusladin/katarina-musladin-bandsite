@@ -63,6 +63,7 @@
 .navigation__menu-item #active {
   color: #ffffff;
   border-bottom: 0.4125rem solid #ffffff;
+  font-weight: bold;
 }
 @media (min-width: 768px) {
   .navigation {
@@ -144,7 +145,7 @@
   align-items: flex-start;
   box-sizing: border-box;
   position: relative;
-  padding: 0 1rem;
+  padding: 0 0rem;
 }
 .footer__logo {
   margin-top: 2.125rem;
@@ -235,9 +236,8 @@
 
 body span {
   line-height: 1.5rem;
-  font-weight: "Avenir Next Regular";
-  font-size: 18px;
   font-family: "Avenir Next Regular";
+  font-size: 18px;
   font-size: 13px;
   line-height: 18px;
 }
@@ -254,14 +254,14 @@ body span {
 .shows-section__content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align content to the start by default */
+  align-items: flex-start;
 }
 .shows-section__date {
   font-weight: bold;
   font-weight: "Avenir Next Regular";
 }
 .shows-section__venue, .shows-section__location, .shows-section__date {
-  font-weight: "Avenir Next Regular";
+  font-weight: "Avenir Next Bold";
   font-size: 18px;
   line-height: 1.5rem;
   padding-bottom: 0.5rem;
@@ -467,25 +467,30 @@ body a {
   z-index: 2;
 }
 @media (min-width: 768px) {
-  .hero .hero__album-title {
+  .hero__album-title {
     font-size: 24px;
     padding-left: 2rem;
   }
-  .hero .hero__big-title {
+  .hero__big-title {
     padding-left: 2rem;
     width: 65%;
     padding-bottom: 2rem;
   }
 }
 @media (min-width: 1200px) {
-  .hero .title {
+  .hero {
+    flex-direction: row;
+  }
+  .hero__title {
     display: flex;
-    flex-direction: column;
     align-items: center;
   }
-  .hero .hero__title {
-    width: 75%;
+  .hero__title {
+    width: 100%;
     margin-left: 5rem;
+  }
+  .hero__big-title {
+    width: 85%;
   }
 }
 
@@ -515,8 +520,8 @@ body a {
 }
 @media (min-width: 1200px) {
   .soundcloud-iframe {
-    width: 80%;
-    margin-top: 2rem;
+    width: 60%;
+    margin-top: 6rem;
   }
 }
 

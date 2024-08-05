@@ -63,6 +63,7 @@
 .navigation__menu-item #active {
   color: #ffffff;
   border-bottom: 0.4125rem solid #ffffff;
+  font-weight: bold;
 }
 @media (min-width: 768px) {
   .navigation {
@@ -144,7 +145,7 @@
   align-items: flex-start;
   box-sizing: border-box;
   position: relative;
-  padding: 0 1rem;
+  padding: 0 0rem;
 }
 .footer__logo {
   margin-top: 2.125rem;

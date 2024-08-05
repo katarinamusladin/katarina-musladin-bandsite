@@ -123,12 +123,12 @@ body {
     
   }
   @include tablet{
-    .hero__album-title{
+    &__album-title{
       font-size: 24px;
       padding-left: 2rem;
       
     }
-    .hero__big-title {
+    &__big-title {
       padding-left: 2rem;
       width: 65%;
       padding-bottom: 2rem;
@@ -140,17 +140,26 @@ body {
  
 
   @include desktop {
-    .title {
+    flex-direction: row;
+   
+    &__title {
       display:flex;
-      flex-direction: column;
+      // flex-direction: column;
       align-items: center;
+      
     }
 
-    .hero__title {
-      width: 75%;
+    &__title {
+     width: 100%;
       margin-left: 5rem;
+      
     
     }
+&__big-title {
+  width: 85%;
+}    
+
+
 
     
 
@@ -188,8 +197,8 @@ padding-left: 32px;
 }
 
 @include desktop {
-    width: 80%;
-    margin-top: 2rem;
+    width: 60%;
+    margin-top: 6rem;
 }
 }
 
