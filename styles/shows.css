@@ -237,7 +237,7 @@
 body span {
   line-height: 1.5rem;
   font-family: "Avenir Next Regular";
-  font-size: 18px;
+  font-size: 1.125rem;
   font-size: 13px;
   line-height: 18px;
 }
@@ -255,7 +255,7 @@ body span {
   transition: background-color 0.3s, transform 0.3s;
 }
 .shows-section__item:hover {
-  background-color: pink;
+  background-color: #f7f7f7;
   cursor: pointer;
 }
 .shows-section__item--selected {
@@ -278,7 +278,7 @@ body span {
 }
 .shows-section__venue, .shows-section__location, .shows-section__date {
   font-weight: "Avenir Next Bold";
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.5rem;
   padding-bottom: 0.5rem;
 }
@@ -287,11 +287,11 @@ body span {
   font-weight: "Avenir Next Demi";
   display: flex;
   flex-direction: column;
-  line-height: 24px;
+  line-height: 1.5rem;
 }
 .shows-section__header {
   display: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   padding-bottom: 1rem;
 }
 .shows-section__list {
@@ -308,7 +308,7 @@ body span {
   cursor: pointer;
   width: 100%;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
 }
 .shows-section__button:hover {
   color: #ffffff;
@@ -366,7 +366,7 @@ body span {
     align-self: flex-end;
     width: auto;
     padding: 0.5rem 1rem;
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 @media (min-width: 1200px) {
@@ -460,7 +460,7 @@ body a {
 .hero__album-title {
   font-family: "Avenir Next Demi";
   padding: 1rem 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   margin-top: 2rem;
   font-size: 0.875rem;
 }
@@ -484,7 +484,7 @@ body a {
 }
 @media (min-width: 768px) {
   .hero__album-title {
-    font-size: 24px;
+    font-size: 1.5rem;
     padding-left: 2rem;
   }
   .hero__big-title {
@@ -511,7 +511,7 @@ body a {
 }
 
 .soundcloud-embed {
-  font-size: 10px;
+  font-size: 0.625rem;
   color: #cccccc;
   line-break: anywhere;
   word-break: normal;
@@ -530,8 +530,8 @@ body a {
 @media (min-width: 768px) {
   .soundcloud-iframe {
     width: 50%;
-    height: 150px;
-    padding-left: 32px;
+    height: 9.375rem;
+    padding-left: 2rem;
   }
 }
 @media (min-width: 1200px) {

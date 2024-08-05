@@ -101,7 +101,6 @@ function displayEvents(events) {
     });
     showsList.appendChild(eventItem);
   });
-  
 }
 
 displayEvents(shows);

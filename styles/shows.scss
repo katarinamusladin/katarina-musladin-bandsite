@@ -95,7 +95,7 @@ body {
   &__album-title {
     font-family: $font-demi;
     padding: 1rem 0;
-    line-height: 24px;
+    line-height: 1.5rem;
     margin-top: 2rem;
     font-size: 0.875rem;
   }
@@ -121,7 +121,7 @@ body {
   }
   @include tablet {
     &__album-title {
-      font-size: 24px;
+      font-size: 1.5rem;
       padding-left: 2rem;
     }
     &__big-title {
@@ -151,7 +151,7 @@ body {
 }
 
 .soundcloud-embed {
-  font-size: 10px;
+  font-size: .625rem;
   color: #cccccc;
   line-break: anywhere;
   word-break: normal;
@@ -169,8 +169,8 @@ body {
 
   @include tablet {
     width: 50%;
-    height: 150px;
-    padding-left: 32px;
+    height: 9.375rem;
+    padding-left: 2rem;
   }
 
   @include desktop {
