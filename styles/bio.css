@@ -305,6 +305,9 @@
   outline: none;
   border: 1px solid #000000;
 }
+#comment-form__name.error {
+  border: 1px solid #d22d2d;
+}
 
 #comment-form__textarea {
   font-family: "Avenir Next Regular";
@@ -318,6 +321,9 @@
 #comment-form__textarea:focus {
   outline: none;
   border: 1px solid #000000;
+}
+#comment-form__textarea.error {
+  border: 1px solid #d22d2d;
 }
 
 #comment-form__button {

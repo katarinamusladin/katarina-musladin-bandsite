@@ -1,32 +1,49 @@
-
-body{
-  span{
+body {
+  span {
     line-height: 1.5rem;
     font-family: $font-reg;
     font-size: 18px;
     font-size: $fs-p;
     line-height: $lh-p;
   }
-  
 }
-
 
 .shows-section {
   padding: 1rem;
   padding-bottom: 2rem;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid $secondary-mercury;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+
+    &:hover {
+      background-color: pink;
+      cursor: pointer;
+    }
+
+    &--selected {
+      background-color: $primary-silver;
+      border: none;
+    }
+  }
 
   &__title {
     font-size: 2rem;
     margin-bottom: 1rem;
     text-align: left;
   }
+
   &__content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
   }
 
-  &__date{
+  &__date {
     font-weight: bold;
     font-weight: $font-reg;
   }
@@ -38,7 +55,6 @@ body{
     font-size: 18px;
     line-height: 1.5rem;
     padding-bottom: 0.5rem;
-    
   }
 
   &__label {
@@ -47,16 +63,12 @@ body{
     display: flex;
     flex-direction: column;
     line-height: 24px;
-    
-    
-    
   }
 
   &__header {
     display: none;
-    font-size:14px;
+    font-size: 14px;
     padding-bottom: 1rem;
-    
   }
 
   &__list {
@@ -75,7 +87,6 @@ body{
     width: 100%;
     font-weight: bold;
     border-radius: 5px;
-    
 
     &:hover {
       color: $primary-white;
@@ -83,9 +94,8 @@ body{
       cursor: pointer;
     }
 
-   @include tablet {
+    @include tablet {
       width: auto;
-      
     }
   }
 
@@ -94,14 +104,11 @@ body{
     flex-direction: column;
     padding: 0.5rem 0;
     border-bottom: 1px solid $secondary-mercury;
-
-    
-   
   }
 
   @include tablet {
     &__header {
-      display: flex;  
+      display: flex;
       justify-content: space-between;
       font-weight: bold;
       color: $primary-silver;
@@ -126,8 +133,6 @@ body{
       flex-direction: column;
     }
 
-   
-
     &__item {
       flex-direction: row;
       justify-content: space-between;
@@ -141,14 +146,11 @@ body{
         padding-left: 1rem;
 
         &__venue,
-      &__location,
-      &__date {
-        width: 50%;
-        align-items: left;
-        
-      }
-
-       
+        &__location,
+        &__date {
+          width: 50%;
+          align-items: left;
+        }
       }
 
       &__button {
@@ -156,7 +158,6 @@ body{
         width: auto;
         padding: 0.5rem 1rem;
         font-size: 16px;
-        
       }
     }
   }
@@ -165,9 +166,8 @@ body{
     &__title {
       padding-left: 8.5rem;
     }
-    &__wrapper{
+    &__wrapper {
       padding-left: 22rem;
     }
   }
 }
-

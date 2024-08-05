@@ -246,6 +246,22 @@ body span {
   padding: 1rem;
   padding-bottom: 2rem;
 }
+.shows-section__item {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e1e1e1;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.shows-section__item:hover {
+  background-color: pink;
+  cursor: pointer;
+}
+.shows-section__item--selected {
+  background-color: #afafaf;
+  border: none;
+}
 .shows-section__title {
   font-size: 2rem;
   margin-bottom: 1rem;

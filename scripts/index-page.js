@@ -54,9 +54,19 @@ form.addEventListener("submit", (e) => {
   const fullName = e.target.name.value;
   const comment = e.target.comment.value;
 
+  inputName.classList.remove('error');
+  inputComment.classList.remove('error');
+
   //here i am checking if everyhting is filled, if it's not it will display an alert to fill.
   if (!fullName || !comment) {
     alert("Please fill all the boxes!");
+
+    if (!fullName) {
+      inputName.classList.add('error');
+    }
+    if (!comment) {
+      inputComment.classList.add('error');
+    }
     return;
   }
 
@@ -66,11 +76,11 @@ form.addEventListener("submit", (e) => {
     comment,
   };
 
- 
   commentsArray.unshift(newComment);
   displayComments();
 
   form.reset();
+  
 });
 
 function createCommentCard(comment) {
@@ -98,7 +108,6 @@ function createCommentCard(comment) {
   divSection.appendChild(dateComment);
   divSection.appendChild(singleComment);
 
-
   return cardFull;
 }
 
@@ -111,8 +120,6 @@ function displayComments() {
     const commentCard = createCommentCard(comment);
     commentsSection.appendChild(commentCard);
   });
-
-  
 }
 
 displayComments();
