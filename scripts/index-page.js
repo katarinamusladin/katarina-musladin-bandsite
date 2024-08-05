@@ -36,16 +36,27 @@ const commentsArray = [
   },
 ];
 
-function formatDate(date) {
-  const month = date.getMonth() + 1;
-  const day = date.getDate();
-  const year = date.getFullYear();
+function formatRelativeTime(date) {
+  const now = new Date();
+  const seconds = Math.floor((now - date) / 1000);
+  const minutes = Math.floor(seconds / 60);
+  const hours = Math.floor(minutes / 60);
+  const days = Math.floor(hours / 24);
+  const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
-  return `${month}/${day}/${year}`;
+  if (days > 0) {
+    return rtf.format(-days, "day");
+  } else if (hours > 0) {
+    return rtf.format(-hours, "hour");
+  } else if (minutes > 0) {
+    return rtf.format(-minutes, "minute");
+  } else {
+    return rtf.format(-seconds, "second");
+  }
 }
 
 let currentDate = new Date();
-currentDate = formatDate(currentDate);
+currentDate = formatRelativeTime(currentDate);
 
 //here i am getting values from form and putting them into an //array 'commentsArray'
 form.addEventListener("submit", (e) => {
@@ -59,7 +70,7 @@ form.addEventListener("submit", (e) => {
 
   //here i am checking if everyhting is filled, if it's not it will display an alert to fill.
   if (!fullName || !comment) {
-    alert("Please fill all the boxes!");
+    // alert("Please fill all the boxes!");
 
     if (!fullName) {
       inputName.classList.add("error");
@@ -72,7 +83,7 @@ form.addEventListener("submit", (e) => {
 
   const newComment = {
     fullName,
-    fullDate: currentDate,
+    fullDate: new Date(),
     comment,
   };
 
@@ -96,7 +107,11 @@ function createCommentCard(comment) {
 
   const dateComment = document.createElement("h4");
   // dateComment.innerHTML = currentDate;
-  dateComment.innerHTML = comment.fullDate;
+  if (comment.fullDate instanceof Date) {
+    dateComment.innerHTML = formatRelativeTime(comment.fullDate);
+  } else {
+    dateComment.innerHTML = comment.fullDate;
+  }
 
   const singleComment = document.createElement("p");
   singleComment.innerHTML = comment.comment;
