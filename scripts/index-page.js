@@ -58,7 +58,6 @@ function formatRelativeTime(date) {
 let currentDate = new Date();
 currentDate = formatRelativeTime(currentDate);
 
-//here i am getting values from form and putting them into an //array 'commentsArray'
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -68,10 +67,7 @@ form.addEventListener("submit", (e) => {
   inputName.classList.remove("error");
   inputComment.classList.remove("error");
 
-  //here i am checking if everyhting is filled, if it's not it will display an alert to fill.
   if (!fullName || !comment) {
-    // alert("Please fill all the boxes!");
-
     if (!fullName) {
       inputName.classList.add("error");
     }
@@ -94,7 +90,6 @@ form.addEventListener("submit", (e) => {
 });
 
 function createCommentCard(comment) {
-  //Here i am creating each element of the comment section
   const cardFull = document.createElement("article");
 
   const cardAvatar = document.createElement("div");
@@ -103,18 +98,18 @@ function createCommentCard(comment) {
   const divSection = document.createElement("div");
 
   const author = document.createElement("h3");
-  author.innerHTML = comment.fullName;
+  author.innerText = comment.fullName;
 
   const dateComment = document.createElement("h4");
-  // dateComment.innerHTML = currentDate;
+
   if (comment.fullDate instanceof Date) {
-    dateComment.innerHTML = formatRelativeTime(comment.fullDate);
+    dateComment.innerText = formatRelativeTime(comment.fullDate);
   } else {
-    dateComment.innerHTML = comment.fullDate;
+    dateComment.innerText = comment.fullDate;
   }
 
   const singleComment = document.createElement("p");
-  singleComment.innerHTML = comment.comment;
+  singleComment.innerText = comment.comment;
 
   cardFull.appendChild(cardAvatar);
   cardFull.appendChild(divSection);
@@ -125,10 +120,9 @@ function createCommentCard(comment) {
   return cardFull;
 }
 
-//Function to display all comments
 function displayComments() {
   const commentsSection = document.getElementById("new-comments");
-  commentsSection.innerHTML = "";
+  commentsSection.innerText = "";
 
   commentsArray.forEach((comment) => {
     const commentCard = createCommentCard(comment);

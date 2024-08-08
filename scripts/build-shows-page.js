@@ -35,7 +35,7 @@ function createEventItem(show) {
   const itemDiv = document.createElement("div");
   itemDiv.className = "shows-section__item";
 
-  //date detail
+ 
   const dateDetailDiv = document.createElement("div");
   dateDetailDiv.className = "shows-section__item-detail";
   const dateLabel = document.createElement("span");
@@ -47,7 +47,7 @@ function createEventItem(show) {
   dateDetailDiv.appendChild(dateLabel);
   dateDetailDiv.appendChild(dateSpan);
 
-  //venue detail
+ 
   const venueDetailDiv = document.createElement("div");
   venueDetailDiv.className = "shows-section__item-detail";
   const venueLabel = document.createElement("span");
@@ -59,7 +59,7 @@ function createEventItem(show) {
   venueDetailDiv.appendChild(venueLabel);
   venueDetailDiv.appendChild(venueSpan);
 
-  //location detail
+
   const locationDetailDiv = document.createElement("div");
   locationDetailDiv.className = "shows-section__item-detail";
   const locationLabel = document.createElement("span");
@@ -71,7 +71,7 @@ function createEventItem(show) {
   locationDetailDiv.appendChild(locationLabel);
   locationDetailDiv.appendChild(locationSpan);
 
-  //button
+  
   const button = document.createElement("button");
   button.className = "shows-section__button";
   button.textContent = "BUY TICKETS";
@@ -84,11 +84,11 @@ function createEventItem(show) {
   return itemDiv;
 }
 const selectedItem = document.querySelector(".shows-section__item--selected");
-// Display events
+
 function displayEvents(events) {
   const showsList = document.querySelector(".shows-section__list");
 
-  showsList.innerHTML = "";
+  showsList.innerText = "";
 
   events.forEach((show) => {
     const eventItem = createEventItem(show);
