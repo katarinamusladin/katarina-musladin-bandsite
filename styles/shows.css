@@ -113,7 +113,7 @@
   }
   .navigation__menu {
     justify-content: left;
-    margin-top: 0px;
+    margin-top: 0;
   }
   .navigation__menu-item {
     margin-left: 1.75rem;
@@ -128,7 +128,7 @@
 .footer {
   background-color: #323232;
   color: #fafafa;
-  padding: 1.5rem 16px;
+  padding: 1.5rem 1rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -250,7 +250,7 @@ body span {
   display: flex;
   flex-direction: column;
   padding: 0.5rem 0;
-  border-bottom: 1px solid #e1e1e1;
+  border-bottom: 0.0625rem solid #e1e1e1;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
 }
@@ -324,7 +324,7 @@ body span {
   display: flex;
   flex-direction: column;
   padding: 0.5rem 0;
-  border-bottom: 1px solid #e1e1e1;
+  border-bottom: 0.0625rem solid #e1e1e1;
 }
 @media (min-width: 768px) {
   .shows-section__header {

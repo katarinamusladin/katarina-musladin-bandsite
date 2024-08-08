@@ -16,7 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 0.5rem 0;
-    border-bottom: 1px solid $secondary-mercury;
+    border-bottom: .0625rem solid $secondary-mercury;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
 
@@ -103,7 +103,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 0.5rem 0;
-    border-bottom: 1px solid $secondary-mercury;
+    border-bottom: .0625rem solid $secondary-mercury;
   }
 
   @include tablet {

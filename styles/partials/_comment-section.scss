@@ -28,8 +28,24 @@
       padding-left: 4.5rem;
     }
     &__input {
-      padding-left: 3rem;
+     display: flex;
+     justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+   
+       
     }
+    &__form-container{
+      width: 45%;
+      margin-left: 1rem;  // Adjust the space between photo and form
+      padding-top: 1rem;
+    }
+    &__photo {
+      margin-top: -15.5rem;  // Move the photo higher
+      padding-right: 0rem;
+      
+    }
+    
   }
 }
 
@@ -40,6 +56,7 @@
   width: 100%;
   padding-left: 2rem;
   padding-right: 1rem;
+  color: $secondary-band-site-dark-black;
 
   &__label {
     font-size: 0.875rem;
@@ -49,6 +66,12 @@
     font-size: 0.75rem;
     color: $primary-silver;
     padding: 1rem 0 0.25rem 0;
+  }
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0rem;
+    
   }
 }
 
@@ -66,16 +89,16 @@
   color: $secondary-band-site-dark-black;
   &:focus {
     outline: none;
-    border: 1px solid $secondary-band-site-dark-black;
+    border: .0625rem solid $secondary-band-site-dark-black;
   }
   &.error {
-    border: 1px solid #d22d2d;
+    border: .0625rem solid #d22d2d;
   }
 }
 
 #comment-form__textarea {
   font-family: $font-reg;
-  min-height: 5rem;
+  min-height: 6rem;
   min-width: 100%;
   border-radius: 0.25rem;
   padding: 0.75rem;
@@ -84,10 +107,10 @@
 
   &:focus {
     outline: none;
-    border: 1px solid $secondary-band-site-dark-black;
+    border: .0625rem solid $secondary-band-site-dark-black;
   }
   &.error {
-    border: 1px solid #d22d2d;
+    border: .0625rem solid #d22d2d;
   }
 }
 
@@ -95,7 +118,7 @@
   background-color: $primary-band-site-black;
   color: $primary-white;
   font-family: $font-demi;
-  padding: 0.5 2rem;
+  padding: 0 1rem;
   margin-bottom: 1rem;
   width: 100%;
   text-align: center;
@@ -109,6 +132,13 @@
     color: $primary-white;
     background: $secondary-band-site-dark-black;
     cursor: pointer;
+  }
+  @include desktop {
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    width: 40%;
+   
   }
 }
 
