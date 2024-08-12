@@ -542,6 +542,7 @@ body a {
   .soundcloud-iframe {
     width: 60%;
     margin-top: 6rem;
+    margin-right: 6rem;
   }
 }
 

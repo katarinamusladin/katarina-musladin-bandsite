@@ -234,6 +234,10 @@
   }
 }
 
+body {
+  font-family: "Avenir Next Regular";
+}
+
 .comment-section__title {
   padding-left: 1rem;
 }
