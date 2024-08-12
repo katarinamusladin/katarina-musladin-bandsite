@@ -1,4 +1,4 @@
-Band Site - Sprint 2
+Band Site - Sprint 3
 
 Author: **Katarina Musladin**
 
